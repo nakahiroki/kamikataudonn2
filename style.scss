@@ -1,0 +1,300 @@
+@charset "utf-8";
+
+$brown:#896560;
+$red: #C8464C;
+$grey:#F9F5F4;
+$white:#FFFFFF;
+
+@mixin main {
+  font-family: Noto Sans JP;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 2.2;
+  letter-spacing: 0.05em;
+}
+
+@mixin text1 {
+  font-family: Noto Sans JP;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 2.2;
+  letter-spacing: 0.05em;
+}
+
+@mixin text2 {
+  font-family: Noto Sans JP;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 2.2;
+  letter-spacing: 0.05em;
+}
+
+@mixin title1 {
+  font-family: Noto Sans JP;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+}
+
+@mixin title2 {
+  font-family: Noto Sans JP;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+}
+
+body{
+  width: 1920px;
+}
+  header{
+    width: 1920px;
+    background-color: $grey;
+    .header_title{
+      @include main;
+      color: $brown;
+      text-align: center;
+      padding-top: 50px;
+    }
+    .header_logo{
+      text-align: center;
+    }
+    ul{
+      width: 412px;
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      margin-left: auto;
+      margin-right: 51px;
+      background-color: $brown;
+      padding: 15px 20px;
+      border-radius: 25px;
+    }
+    a{
+      text-decoration: none;
+      color: $white;
+    }
+    .header_img{
+      text-align: center;
+      max-width: 100%;
+      padding-bottom: 50px;
+    }
+  }
+
+  // お知らせエリア
+  .information{
+    .information_area{
+      width: 1920px;
+    }
+    .information_title{
+      width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 50px
+    }
+    .information_text{
+      table{
+        td{
+          @include text1;
+          color: $brown;
+          padding-bottom: 30px;
+        }
+      }
+    }
+    .information_changingeveryday{
+      width: 360px;
+      font-size: 20px;
+      background-color: #BA4146;
+      text-align: center;
+      padding: 10px ;
+      border-radius: 10px;
+      a{
+        text-decoration: none;
+        color: $white;
+      }
+      span{
+        @include main;
+        color: $white;
+      }
+    }
+  }
+
+
+
+  // こだわりエリア
+.importantly{
+  .importantly_area{
+    width: 1920px;
+    background-color: $grey;
+    .importantly_team{
+      display: flex;
+      // flex-direction: column;
+      padding-top: 200px;
+    }
+    .importantly_store{
+      text-align: left;
+    }
+    .importantly_title{
+      margin-left: auto;
+      margin-right: auto;
+      flex-direction: column;
+      padding-bottom: 102px;
+    }
+    .importantly_text{
+      width: 560px;
+      height: 252px;
+      background-color: $white;
+    }
+    .importantly_info{
+      @include text1;
+      color: $brown;
+      padding-bottom: 30px;
+    }
+  }
+    .importantly{
+      display: flex;
+      background-color: $grey;
+      padding-bottom: 30px;
+// 画像の位置が調整出来ていない
+      .importantly_img{
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .img_text{
+        width: 360px;
+      }
+    }
+}
+
+// お品書きエリア
+.menu_area{
+  background-color: $white;
+  .menu_title{
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  .menu_list{
+    // 幅が下の要素とずれている
+    width: 800px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    padding-bottom: 30px;
+  }
+  .menu_item{
+    width: 138px;
+    text-decoration: none;
+    list-style: none;
+    color: $white;
+    background-color: $brown;
+    border-radius: 55px;
+    text-align: center;
+    justify-content: space-between;
+    padding: 15px;
+  }
+}
+
+.menu_food{
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  h2{
+    @include title1;
+    color: $brown;
+    border-bottom: 1px solid $brown;
+  }
+}
+.menu_noodle{
+  @include main;
+  color: $brown;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+  td{
+    // ここの幅の指定？
+    padding-right: 60px;
+    padding-bottom: 25px;
+  }
+}
+// ここもデザインの位置とずれている
+.menu_changingeveryday{
+  width: 360px;
+  font-size: 20px;
+  background-color: #BA4146;
+  text-align: center;
+  padding: 10px ;
+  border-radius: 10px;
+  a{
+    text-decoration: none;
+    color: $white;
+  }
+  span{
+    @include main;
+    color: $white;
+  }
+}
+
+// アクセスエリア
+.access{
+  width: 1920px;
+  background-color: $grey;
+  &_main{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &_area{
+    padding-bottom: 30px;
+  }
+  &_info{
+    display: flex;
+  }
+  &_list{
+    width: 360px;
+    padding-left: 80px;
+  }
+  &_text{
+    font-family: Noto Sans JP;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 2.2;
+    letter-spacing: 0.05em;
+    color: $brown;
+  }
+  &_text_sub{
+    @include main;
+    color: $brown;
+    padding-bottom: 30px;
+  }
+  &_red{
+    font-family: Noto Sans JP;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 2.2;
+    letter-spacing: 0.05em;
+    color: $red;
+    padding-bottom: 28px;
+  }
+  &_link{
+    list-style: none;
+    padding-bottom: 20px;
+    a{
+      color: $brown;
+    }
+  }
+}
+// フッターとの間に白の余白がある
+
+// フッターエリア
+.footer{
+  width: 1920px;
+  height: 150px;
+  background-color: $brown;
+  &_main{
+    color: $white;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 50px;
+  }
+}
