@@ -45,138 +45,365 @@ $white:#FFFFFF;
   letter-spacing: 0.05em;
 }
 
-body{
-  width: 1920px;
+@mixin sp_title1 {
+  font-family: Noto Sans JP;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: 0.05em;
 }
-  header{
-    width: 1920px;
-    background-color: $grey;
-    .header_title{
-      @include main;
-      color: $brown;
-      text-align: center;
-      padding-top: 50px;
-    }
-    .header_logo{
-      text-align: center;
-    }
+
+@mixin sp_bold {
+  font-family: Noto Sans JP;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+}
+
+@mixin sp_text {
+  font-family: Noto Sans JP;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+}
+
+header{
+  width: 100%;
+  background-color: $grey;
+  .header_title{
+    @include main;
+    color: $brown;
+    text-align: center;
+    padding-top: 50px;
+  }
+  .header_logo{
+    text-align: center;
+  }
+  .header_list{
     ul{
-      width: 412px;
-      display: flex;
-      justify-content: space-between;
-      list-style: none;
-      margin-left: auto;
-      margin-right: 51px;
-      background-color: $brown;
-      padding: 15px 20px;
-      border-radius: 25px;
+    max-width: 412px;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin-left: auto;
+    margin-right: 51px;
+    background-color: $brown;
+    padding: 15px 20px;
+    border-radius: 25px;
+    }
+    li:hover{
+      border-bottom: 1px solid $white;
     }
     a{
       text-decoration: none;
       color: $white;
     }
+  }
     .header_img{
       text-align: center;
-      max-width: 100%;
       padding-bottom: 50px;
+      img{
+        width: 80%;
+        max-width: 1200px;
+      }
+    }
+}
+// 🍔
+.sp-menu{
+  margin-top: 0;
+  margin-right: 0;
+}
+// .material-icons{
+//   // display: none;
+// }
+.sp-menu #open{
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 32px;
+  line-height: 64px;
+  cursor: pointer;
+}
+
+.sp-menu #open.hide {
+  display: none;
+}
+
+.overlay{
+  width: auto;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: $grey;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .6s;
+}
+
+.overlay.show {
+  width: 70%;
+  max-width: 100%;
+  height: 100%;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlay #close {
+  width: 65px;
+  height: 65px;
+  color: $white;
+  text-align: center;
+  background-color: $brown;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.overlay_title{
+  @include sp_title1;
+  color: $brown;
+  text-align: center;
+  padding-top:20px;
+  padding-bottom: 10px;
+}
+
+.overlay_logo{
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.overlay_list {
+  text-align: center;
+  li{
+    margin-top: 40px;
+  }
+  a{
+    text-decoration: none;
+    @include sp_text;
+    color: $brown;
+    border-bottom: solid 1px $white;
+    // 線の位置
+  }
+}
+
+// お知らせエリア
+.information{
+  .information_title{
+    width: 90%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+  }
+  .information_logo{
+    padding-bottom: 30px;
+  }
+  .information_time{
+    display: flex;
+    justify-content: space-between;
+  }
+  .information_text{
+    width: auto;
+    max-width: 360%;
+    // margin: 0 auto;
+    padding-bottom: 200px;
+    table{
+      td{
+        @include text1;
+        color: $brown;
+        padding-bottom: 30px;
+      }
     }
   }
-
-  // お知らせエリア
-  .information{
-    .information_area{
-      width: 1920px;
+  .information_changingeveryday{
+    width: auto;
+    max-width: 360px;
+    font-size: 20px;
+    background-color: $red;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    a{
+      text-decoration: none;
+      color: $white;
     }
-    .information_title{
-      width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-      padding-top: 50px
-    }
-    .information_text{
-      table{
-        td{
-          @include text1;
-          color: $brown;
-          padding-bottom: 30px;
-        }
-      }
-    }
-    .information_changingeveryday{
-      width: 360px;
-      font-size: 20px;
-      background-color: #BA4146;
-      text-align: center;
-      padding: 10px ;
-      border-radius: 10px;
-      a{
-        text-decoration: none;
-        color: $white;
-      }
-      span{
-        @include main;
-        color: $white;
-      }
+    span{
+      @include main;
+      color: $white;
     }
   }
+  .information_changingeveryday:hover{
+    background-color: $white;
+    color: $red;
+    border: solid 1px $red;
+    a{
+      color: $red;
+    }
+    span{
+      color: $red;
+    }
+  }
+}
+// 下線の波線１段目
+.container {
+  position: relative;
+  background: $white;
+  height: 50vh;
+}
 
+.wave1 {
+  position: absolute;
+  height: 150px;
+  width: 100%;
+  background: $white;
+  bottom: 0;
+}
 
+.wave1::before, .wave1::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+}
 
-  // こだわりエリア
+.wave1::before {
+  width: 55%;
+  height: 109%;
+  background-color: $grey;
+  right: 0%;
+  top: 60%;
+}
+.wave1::after {
+  width: 55%;
+  height: 100%;
+  background-color: $white;
+  left: -1.5%;
+  top: 35%;
+}
+// こだわりエリア
 .importantly{
   .importantly_area{
-    width: 1920px;
     background-color: $grey;
     .importantly_team{
       display: flex;
-      // flex-direction: column;
-      padding-top: 200px;
+      padding-top: 100px;
     }
     .importantly_store{
+      width: 80%;
+      max-width: 920px;
       text-align: left;
+      img{
+        width: 80%;
+        max-width: 100%;
+        margin: 0 auto;
+      }
     }
     .importantly_title{
-      margin-left: auto;
-      margin-right: auto;
       flex-direction: column;
-      padding-bottom: 102px;
+      img{
+        padding-bottom: 102px;
+      }
     }
     .importantly_text{
-      width: 560px;
-      height: 252px;
+      width: 100%;
+      max-width: 560px;
       background-color: $white;
+      padding-top: 30px
     }
     .importantly_info{
       @include text1;
       color: $brown;
       padding-bottom: 30px;
     }
-  }
-    .importantly{
-      display: flex;
-      background-color: $grey;
-      padding-bottom: 30px;
-// 画像の位置が調整出来ていない
-      .importantly_img{
-        margin-left: auto;
-        margin-right: auto;
-      }
-      .img_text{
-        width: 360px;
-      }
+    p{
+      @include text1;
+      color: $brown;
     }
+  }
+  // こだわりエリアの下段
+  .importantly{
+    width: auto;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: $grey;
+    padding-bottom: 150px;
+    .importantly_img1{
+      vertical-align: bottom;
+      margin-top: 150px;
+    }
+    .img_text{
+      width: 100%;
+      max-width: 360px;
+      margin: 0 auto;
+      padding-top: 30px;
+    }
+    p{
+      color: $brown;
+      @include main;
+    }
+  }
+}
+
+// 下線の波線２段目
+.container {
+  position: relative;
+  background: $grey;
+  height: 50vh;
+}
+
+.wave2 {
+  position: absolute;
+  height: 150px;
+  width: 100%;
+  background: $grey;
+  bottom: 0;
+}
+
+.wave2::before, .wave2::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+}
+
+.wave2::before {
+  width: 55%;
+  height: 109%;
+  background-color: $white;
+  right: 0%;
+  top: 60%;
+}
+.wave2::after {
+  width: 55%;
+  height: 100%;
+  background-color: $grey;
+  left: -1.5%;
+  top: 35%;
 }
 
 // お品書きエリア
 .menu_area{
-  background-color: $white;
+background-color: $white;
+padding-bottom: 150px;
   .menu_title{
     text-align: center;
+    padding-top: 100px;
     padding-bottom: 30px;
   }
   .menu_list{
     // 幅が下の要素とずれている
-    width: 800px;
+    width: auto;
+    max-width: 800px;
     display: flex;
     margin-left: auto;
     margin-right: auto;
@@ -184,7 +411,8 @@ body{
     padding-bottom: 30px;
   }
   .menu_item{
-    width: 138px;
+    width: 90%;
+    max-width: 138px;
     text-decoration: none;
     list-style: none;
     color: $white;
@@ -193,66 +421,140 @@ body{
     text-align: center;
     justify-content: space-between;
     padding: 15px;
+    a{
+      text-decoration: none;
+      color: $white;
+    }
   }
+  .menu_item:hover{
+    background-color: $white;
+    border: solid 1px $brown;
+    a{
+      color: $brown;
+    }
+  }
+
+  .menu_food{
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    h2{
+      @include title1;
+      color: $brown;
+      border-bottom: 1px solid $brown;
+    }
+  }
+  .menu_noodle{
+    @include main;
+    color: $brown;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+  }
+  .menu_img{
+    img{
+      width: auto;
+      max-width: 360px;
+      margin: 0 auto;
+    }
+  }
+  // ここもデザインの位置とずれている
+  .menu_changingeveryday{
+    width: 360px;
+    font-size: 20px;
+    background-color: #BA4146;
+    text-align: center;
+    padding: 10px ;
+    border-radius: 10px;
+    a{
+      text-decoration: none;
+      color: $white;
+    }
+    span{
+      @include main;
+      color: $white;
+    }
+  }
+  .menu_changingeveryday:hover{
+    background-color: $white;
+    color: $red;
+    border: solid 1px $red;
+    a{
+      color: $red;
+    }
+    span{
+      color: $red;
+    }
+  }
+}
+// 下線の波線 3段目
+.container {
+  position: relative;
+  background: $white;
+  height: 2vh;
 }
 
-.menu_food{
-  width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  h2{
-    @include title1;
-    color: $brown;
-    border-bottom: 1px solid $brown;
-  }
+.wave3 {
+  position: absolute;
+  height: 100px;
+  width: 100%;
+  background: $white;
+  bottom: 0;
 }
-.menu_noodle{
-  @include main;
-  color: $brown;
-  display: flex;
-  justify-content: space-between;
-  padding-top: 40px;
-  td{
-    // ここの幅の指定？
-    padding-right: 60px;
-    padding-bottom: 25px;
-  }
+
+.wave3::before, .wave3::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 50% 100%;
 }
-// ここもデザインの位置とずれている
-.menu_changingeveryday{
-  width: 360px;
-  font-size: 20px;
-  background-color: #BA4146;
-  text-align: center;
-  padding: 10px ;
-  border-radius: 10px;
-  a{
-    text-decoration: none;
-    color: $white;
-  }
-  span{
-    @include main;
-    color: $white;
-  }
+
+.wave3::before {
+  width: 55%;
+  height: 100%;
+  background-color: $white;
+  right: 0%;
+  top: 40%;
+}
+.wave3::after {
+  width: 55%;
+  height: 109%;
+  background-color: $grey;
+  left: -1.5%;
+  top: 60%;
 }
 
 // アクセスエリア
 .access{
-  width: 1920px;
+  width: auto;
   background-color: $grey;
+  margin-left: auto;
+  margin-right: auto;
   &_main{
-    margin-left: auto;
-    margin-right: auto;
+    padding-bottom: 100px;
   }
   &_area{
+    width: 200px;
+    margin-left: 25%;
+    margin-right: 75%;
+    padding-top: 100px;
     padding-bottom: 30px;
   }
   &_info{
+    width: 80%;
+    max-width: 900px;
     display: flex;
+    margin-left: 25%;
+    margin-right: 75%;
   }
   &_list{
-    width: 360px;
+    width: 30%;
+    max-width: 360px;
     padding-left: 80px;
+  }
+  td{
+    padding-bottom: 30px;
   }
   &_text{
     font-family: Noto Sans JP;
@@ -265,7 +567,6 @@ body{
   &_text_sub{
     @include main;
     color: $brown;
-    padding-bottom: 30px;
   }
   &_red{
     font-family: Noto Sans JP;
@@ -274,13 +575,15 @@ body{
     line-height: 2.2;
     letter-spacing: 0.05em;
     color: $red;
-    padding-bottom: 28px;
   }
   &_link{
     list-style: none;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     a{
       color: $brown;
+    }
+    a:hover{
+      color: $red;
     }
   }
 }
@@ -288,7 +591,6 @@ body{
 
 // フッターエリア
 .footer{
-  width: 1920px;
   height: 150px;
   background-color: $brown;
   &_main{
@@ -296,5 +598,236 @@ body{
     text-align: center;
     padding-top: 80px;
     padding-bottom: 50px;
+  }
+}
+
+@media screen and (min-width:769px){
+/* PC用CSS -------------- */
+
+}
+
+@media screen and (max-width:480px){
+/* スマホ用CSS -------------- */
+  // .body{
+  //   max-width: 480px;
+  // }
+// ヘッダーエリア
+  .header_title{
+    @include sp_bold;
+  }
+  .header_logo{
+    padding-bottom: 30px;
+    img{
+      width: 40%;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .header_list{
+    display: none;
+  }
+  .header_img{
+    width: auto;
+    img{
+      width: 100%;
+      max-width: 90%;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .overlay{
+    padding: auto;
+  }
+
+// お知らせエリア
+  .information_title{
+    width: auto;
+    max-width: 100%;
+  }
+  .information_logo{
+    text-align: center;
+    img{
+      width: 40%;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .information_time{
+    width: 90%;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .information_text{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .information_changingeveryday{
+    width: 80%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  // 下線エリア１
+  .wave1{
+    width: 100%;
+    max-width: 100%;
+  }
+
+  // こだわりエリア
+  .importantly{
+    width: auto;
+  }
+  .importantly_area{
+    width: 140%;
+    max-width: 140%;
+    height: auto;
+  }
+  .importantly_team{
+		flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  .importantly_store{
+    order: 2;
+    img{
+      width: 90%;
+      max-width: 100%;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .importantly_title{
+    order: 1;
+    img{
+      width: 40%;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .importantly_text{
+    order: 3;
+    width: 100%;
+    max-width: 50%;
+    height: auto;
+  }
+  .importantly{
+    width: 70%;
+    max-width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+  .importantly_img1{
+    width: auto;
+    text-align: center;
+    img{
+      width: 80%;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .importantly_img2{
+    width: auto;
+    text-align: center;
+    img{
+      width: 80%;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .img_text{
+    font-size: 10px;
+  }
+
+
+  // お品書きエリア
+  .menu_title{
+    max-width: auto;
+    img{
+    width: 40%;
+    max-width: 100%;
+    height: auto;
+    }
+  }
+  .menu_list{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .menu_item{
+    margin: 5px;
+    width: 50%;
+  }
+  .menu_food{
+    max-width: 100%;
+  }
+  .menu_food_title{
+    width: 80%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .menu_noodle{
+    @include sp_title1;
+    flex-direction: column-reverse;
+    td{
+      padding: 0;
+      text-align: center;
+    }
+  }
+  .menu_img{
+    width: auto;
+    text-align: center;
+    img{
+      width: 90%;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .menu_changingeveryday{
+    width: auto;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+  }
+
+  .access{
+    width: 100%;
+    max-width: 100%;
+    &_info{
+      flex-direction: column;
+      width: 100%;
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &_map{
+      text-align: center;
+      iframe{
+        width: 80%;
+        max-width: 100%;
+      }
+    }
+    &_list{
+      width: auto;
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 0;
+    }
+  }
+  .footer{
+    width: auto;
+  }
+  .footer_main{
+    @include  sp_bold;
   }
 }

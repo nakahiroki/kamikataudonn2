@@ -2,155 +2,153 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>kamigataudonn</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.min.css">
 </head>
-<header>
-  <div class="header_nav">
-    <div class="header_wrapper">
-      <div class="header_title">大阪・木津市場のうどん屋さん
+<body>
+  <header>
+    <div class="header_nav">
+      <div class="header_wrapper">
+        <div class="header_title">大阪・木津市場のうどん屋さん
+        </div>
+        <div class="header_logo">
+          <img src="img/logo.png" alt="上方うどんの手書きタイトル" width="250px" height="82px">
+        </div>
       </div>
-      <div class="header_logo">
-        <img src="img/logo.png" alt="上方うどんの手書きタイトル" width="250px" height="82px">
+      <div class="header_list">
+        <ul>
+          <li><a href="#">お知らせ</a></li>
+          <li><a href="#">こだわり</a></li>
+          <li><a href="#">お品書き</a></li>
+          <li><a href="#">アクセス</a></li>
+        </ul>
       </div>
     </div>
-    <ul>
-      <li><a href="#">お知らせ</a></li>
-      <li><a href="#">こだわり</a></li>
-      <li><a href="#">お品書き</a></li>
-      <li><a href="#">アクセス</a></li>
-    </ul>
     <div class="header_img">
       <img src="img/nikuudonn.jpg" alt="上方うどんの写真" width="1200px" height="500px">
     </div>
+    <!-- 🍔 -->
+    <div class="sp-menu">
+      <span class="material-icons" id="open">menu</span>
+    </div>
+
+  </header>
+  <div class="overlay">
+    <span class="material-icons" id="close">close</span>
+    <div class="overlay_title">大阪・木津市場のうどん屋さん</div>
+    <div class="overlay_logo">
+      <img src="img/logo.png" alt="上方うどんの手書きタイトル" width="250px" height="82px">
+    </div>
+    <nav class="overlay_list">
+      <ul>
+        <li><a href="#">お知らせ</a></li>
+        <li><a href="#">こだわり</a></li>
+        <li><a href="#">お品書き</a></li>
+        <li><a href="#">アクセス</a></li>
+      </ul>
+    </nav>
+
   </div>
-</header>
-<!-- お知らせエリア -->
-<section class=information>
-  <div class="information_area">
+  <!-- お知らせエリア -->
+  <section class=information>
     <div class="information_title">
-      <div class="infomation_title_img">
+      <div class="information_logo">
         <img src="img/osirase.png" alt="お知らせ" width="200px" height="53px">
       </div>
-      <div class="information_img">
-        <img src="">
+      <div class="information_time">
         <!-- カレンダー要素 -->
-      </div>
-      <div class="information_text">
-        <table>
-          <tr>
-            <td>
-              <span>営業時間</span>
-              <br>
-              <span>5:30〜14:00</span>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <span>定休日</span>
-              <br>
-              <span>土曜日・日曜日・祝日</span>
-              <span>(加えて木津卸市場の定休日</span>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <span>ご予約・お問い合わせ</span>
-              <br>
-              <span>TEL 090-1196-6794</span>
-            </td>
-          </tr>
-        </table>
-        <div class="information_changingeveryday">
-          <a href="#">日替わりお弁当<br><span>○月○日のメニューはこちら</span>
-          </a>
+        <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Asia%2FTokyo&amp;src=cW1lZzY0bTk4aXQ2MGN1cGpjN2ZrZ21tYzRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=amEuamFwYW5lc2UjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23D50000&amp;color=%237986CB&amp;showTz=0&amp;showCalendars=0&amp;showTabs=0&amp;showPrint=0&amp;showTitle=0&amp;showDate=1" style="border:solid 1px #777" width="360" height="300" frameborder="0" scrolling="no"></iframe>
+        <div class="information_text">
+          <table>
+            <tr>
+              <td>
+                <span>営業時間</span>
+                <br>
+                <span>5:30〜14:00</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span>定休日</span>
+                <br>
+                <span>土曜日・日曜日・祝日</span>
+                <br>
+                <span>(加えて木津卸市場の定休日</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span>ご予約・お問い合わせ</span>
+                <br>
+                <span>TEL 090-1196-6794</span>
+              </td>
+            </tr>
+          </table>
+          <div class="information_changingeveryday">
+            <a href="#">日替わりお弁当<br><span>○月○日のメニューはこちら</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- 下線の波型 -->
-<section class="container">
-  <div class="wave1"></div>
-</section>
-<!-- こだわりエリア -->
-<section class="importantly">
-  <div class="importantly_area">
-    <div class="importantly_team">
-      <div class="importantly_store">
-        <img src="img/kodawari1.png" alt="店舗外観" 　width="920px" height="550px">
-      </div>
-      <div class="importantly_title">
-        <img src="img/kodawari.png" alt="こだわりの手書き文字画像">
-        <div class="importantly_text">
-          <h2 class="importantly_info">
+  </section>
+  <!-- 下線の波型 -->
+  <section class="container">
+    <div class="wave1"></div>
+  </section>
+  <!-- こだわりエリア -->
+  <section class="importantly">
+    <div class="importantly_area">
+      <div class="importantly_team">
+        <div class="importantly_store">
+          <img src="img/kodawari1.png" alt="店舗外観" 　width="920px" height="550px">
+        </div>
+        <div class="importantly_title">
+          <img src="img/kodawari.png" alt="こだわりの手書き文字画像">
+          <div class="importantly_text">
+            <h2 class="importantly_info">
                 （仮）お仕事の合間に、お買い物のついでに。 お腹も心も満たしたい、小さなうどん屋さんです。
               </h2>
-          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+          </div>
+        </div>
+      </div>
+      <div class="importantly">
+        <div class="importantly_img1">
+          <img src="img/itiba.jpg" alt="市場の外観" width="360px" height="300px">
+          <p class="img_text">（仮）木津市場の魅力など？早朝から賑わう木津市場の飲食店。市場の○〇〇あたりにある上方うどんも5：30から開店しています。</p>
+        </div>
+        <div class="importantly_img2">
+          <img src="img/ryouri.jpg" alt="定食の写真" width="360px" height="300px">
+          <p class="img_text">（仮）朝も、昼も、夜も、あたたかく懐かしいご飯をご提供します、など。人気のメニューは〜〜〜など。</p>
         </div>
       </div>
     </div>
-    <div class="importantly">
-      <div class="importantly_img1">
-        <img src="img/itiba.jpg" alt="市場の外観" width="360px" height="300px">
-        <p class="img_text">（仮）木津市場の魅力など？早朝から賑わう木津市場の飲食店。市場の○〇〇あたりにある上方うどんも5：30から開店しています。</p>
-      </div>
-      <div class="importantly_img2">
-        <img src="img/ryouri.jpg" alt="定食の写真" width="360px" height="300px">
-        <p class="img_text">（仮）朝も、昼も、夜も、あたたかく懐かしいご飯をご提供します、など。人気のメニューは〜〜〜など。</p>
-      </div>
+  </section>
+  <!-- 下線の波型 -->
+  <section class="container">
+    <div class="wave2"></div>
+  </section>
+  <!-- お品書き -->
+  <section class="menu_area">
+    <div class="menu_title">
+      <img src="img/oshinagaki.png" alt="メニューのタイトル画像" 　width="200px" height="80px">
     </div>
-  </div>
-</section>
-<!-- 下線の波型 -->
-<section class="container">
-  <div class="wave2"></div>
-</section>
-<!-- お品書き -->
-<section class="menu_area">
-  <div class="menu_title">
-    <img src="img/oshinagaki.png" alt="メニューのタイトル画像" 　width="200px" height="80px">
-  </div>
-  <nav class="menu_nav">
-    <div class="menu_innerr">
-      <ul class="menu_list">
-        <li class="menu_item"><a href="">うどん・そば</a></li>
-        <li class="menu_item"><a href="">定食</a></li>
-        <li class="menu_item"><a href="">丼もの</a></li>
-        <li class="menu_item"><a href="">お弁当</a></li>
-      </ul>
-    </div>
-  </nav>
-  <div class="menu_food">
-    <h2 class="menu_food_title">うどん・そば</h2>
-    <div class="menu_noodle">
-      <table>
-        <tr>
-          <td>かけうどん・そば</td>
-          <td>500円（税込)</td>
-        </tr>
-        <tr>
-          <td>かけうどん・そば</td>
-          <td>500円（税込)</td>
-        </tr>
-        <tr>
-          <td>かけうどん・そば</td>
-          <td>500円（税込)</td>
-        </tr>
-        <tr>
-          <td>かけうどん・そば</td>
-          <td>500円（税込)</td>
-        </tr>
-      </table>
-      <div class="menu_img">
-        <img src="img/nikuudonn.jpg" alt="料理の写真" 　width="360px" height="270px">
+    <nav class="menu_nav">
+      <div class="menu_innerr">
+        <ul class="menu_list">
+          <li class="menu_item"><a href="">うどん・そば</a></li>
+          <li class="menu_item"><a href="">定食</a></li>
+          <li class="menu_item"><a href="">丼もの</a></li>
+          <li class="menu_item"><a href="">お弁当</a></li>
+        </ul>
       </div>
-    </div>
+    </nav>
     <div class="menu_food">
-      <h2 class="menu_food_title">定食</h2>
+      <h2 class="menu_food_title">うどん・そば</h2>
       <div class="menu_noodle">
         <table>
           <tr>
@@ -175,7 +173,7 @@
         </div>
       </div>
       <div class="menu_food">
-        <h2 class="menu_food_title">丼もの</h2>
+        <h2 class="menu_food_title">定食</h2>
         <div class="menu_noodle">
           <table>
             <tr>
@@ -199,67 +197,95 @@
             <img src="img/nikuudonn.jpg" alt="料理の写真" 　width="360px" height="270px">
           </div>
         </div>
-      </div>
-      <div class="menu_food">
-        <h2 class="menu_food_title">お弁当</h2>
-        <div class="menu_noodle">
-          <table>
-            <tr>
-              <td>かけうどん・そば</td>
-              <td>500円（税込)</td>
-            </tr>
-          </table>
-          <div class="menu_img">
-            <img src="img/nikuudonn.jpg" alt="料理の写真" 　width="360px" height="270px">
+        <div class="menu_food">
+          <h2 class="menu_food_title">丼もの</h2>
+          <div class="menu_noodle">
+            <table>
+              <tr>
+                <td>かけうどん・そば</td>
+                <td>500円（税込)</td>
+              </tr>
+              <tr>
+                <td>かけうどん・そば</td>
+                <td>500円（税込)</td>
+              </tr>
+              <tr>
+                <td>かけうどん・そば</td>
+                <td>500円（税込)</td>
+              </tr>
+              <tr>
+                <td>かけうどん・そば</td>
+                <td>500円（税込)</td>
+              </tr>
+            </table>
+            <div class="menu_img">
+              <img src="img/nikuudonn.jpg" alt="料理の写真" 　width="360px" height="270px">
+            </div>
           </div>
         </div>
-        <div class="menu_changingeveryday">
-          <a href="#">日替わりお弁当</a>
-          <br><span>○月○日のメニューはこちら</span>
+        <div class="menu_food">
+          <h2 class="menu_food_title">お弁当</h2>
+          <div class="menu_noodle">
+            <table>
+              <tr>
+                <td>かけうどん・そば</td>
+                <td>500円（税込)</td>
+              </tr>
+            </table>
+            <div class="menu_img">
+              <img src="img/nikuudonn.jpg" alt="料理の写真" 　width="360px" height="270px">
+            </div>
+          </div>
+          <div class="menu_changingeveryday">
+            <a href="#">日替わりお弁当</a>
+            <br><span>○月○日のメニューはこちら</span>
+          </div>
+        </div>
+  </section>
+  <!-- 下線の波線 -->
+  <section class="container">
+    <div class="wave3"></div>
+  </section>
+  <!-- アクセス -->
+  <section class="access">
+    <div class="access_main">
+      <div class="access_area">
+        <img src="img/access.png" alt="アクセスの手書き画像" 　width="200px" height="83px">
+      </div>
+      <div class="access_info">
+        <div class="access_map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d820.4754520633543!2d135.50018860021984!3d34.657182645825884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1985199db58fec8b!2z5LiK5pa544GG44Gp44KT!5e0!3m2!1sja!2sjp!4v1622469750933!5m2!1sja!2sjp" width="459px" height="382px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="access_list">
+          <table>
+            <tr>
+              <td>
+                <span class="access_text">住所</span>
+                <br><span class="access_text_sub">大阪府大阪市浪速区敷津東2-2-1 なんば木津まち横丁</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="access_text">ご予約・お問い合わせ</span>
+                <br><span class="access_red">電話：000−000−0000</span>
+              </td>
+            </tr>
+          </table>
+          <div class="access_link">
+            <a href="">＞大阪木津卸売市場　公式ホームページ</a>
+          </div>
+          <div class="access_link">
+            <a href="">＞木津の朝市（大阪木津卸売市場協会）</a>
+          </div>
         </div>
       </div>
-</section>
-<!-- 下線の波線 -->
-<section class="container">
-  <div class="wave3"></div>
-</section>
-<!-- アクセス -->
-<section class="access">
-  <div class="access_main">
-    <div class="access_area">
-      <img src="img/access.png" alt="アクセスの手書き画像" 　width="200px" height="83px">
     </div>
-    <div class="access_info">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d820.4754520633543!2d135.50018860021984!3d34.657182645825884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1985199db58fec8b!2z5LiK5pa544GG44Gp44KT!5e0!3m2!1sja!2sjp!4v1622469750933!5m2!1sja!2sjp" width="459px" height="382px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-      <div class="access_list">
-        <table>
-          <tr>
-            <td>
-              <span class="access_text">住所</span>
-              <br><span class="access_text_sub">大阪府大阪市浪速区敷津東2-2-1 なんば木津まち横丁</span>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <span class="access_text">ご予約・お問い合わせ</span>
-              <br><span class="access_red">電話：000−000−0000</span>
-            </td>
-          </tr>
-        </table>
-        <div class="access_link">
-          <a href="">＞大阪木津卸売市場　公式ホームページ</a>
-        </div>
-        <div class="access_link">
-          <a href="">＞木津の朝市（大阪木津卸売市場協会）</a>
-        </div>
-      </div>
+  </section>
+  <section class="footer">
+    <div class="footer_area">
+      <p class="footer_main">&copy;KAMIKATAUDON</p>
     </div>
-  </div>
-</section>
-<section class="footer">
-  <div class="footer_area">
-    <p class="footer_main">&copy;KAMIKATAUDON</p>
-  </div>
-</section>
+  </section>
+  <script src="js/main.js"></script>
 </body>
 </html>
